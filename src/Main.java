@@ -41,10 +41,7 @@ public class Main {
                 .sorted(Comparator.comparingInt(User::getAge))
                 .collect(Collectors.toList());
         System.out.println("Users: ");
-        for (User user : usersGreaterThan18) {
-            System.out.println(user.toString().toUpperCase());
-        }
-
+        usersGreaterThan18.forEach(user -> System.out.println(user.toString().toUpperCase()));
 
 
     }
